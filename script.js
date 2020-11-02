@@ -5,7 +5,7 @@ $(document).ready(function () {
   var cityName = "Atlanta";
   var today = moment().format("MM/DD/YYYY");
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityName +
     "&units=imperial&APPID=4c2327a73f7bc3816d03b00efbb7c4e2";
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
     // get today's weather for:
     // weather icon??
     var todayWeatherIcon =
-      "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+      "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
     // temperature, humidity, and wind speed in an array
     var todayArray = [
       "Temperature: " + response.main.temp + " °F",
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     // create a new url for the uv index ajax call
     var lanLonURL =
-      "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+      "https://api.openweathermap.org/data/2.5/uvi?lat=" +
       lat +
       "&lon=" +
       lon +
