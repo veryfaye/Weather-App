@@ -18,16 +18,19 @@
   </head>
   <body>
     <!-- Header element. Using Navbar classes from bootstrap for formatting -->
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <h1 class="text-light font-weight-strong">Weather Dashboard</h1>
-    </header>
+
+      <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h1 class="text-light font-weight-strong">Weather Dashboard</h1>
+      </header>
+
+    
     <!-- Main element to contain the sub elements -->
     <main class="container-fluid">
       <div class="row">
-        <div class="col-sm-4 bg-light pb-4">
+        <div class="col-sm-3 bg-light pb-4">
           <!-- Aside element for the city search, and links to previously searched cities -->
           <aside>
-            <form class="ml-2">
+            <form class="ml-2" id="form-city-search">
               <div class="row">
                 <h3>
                   <label for="city-search">Search for a City:</label>
@@ -39,7 +42,7 @@
                   class="form-control col-9"
                   id="city-search"
                 />
-                <button type="submit" class="btn btn-primary col-2">
+                <button type="submit" class="btn btn-primary col-2" id="submit-city-seach">
                   <i class="fa fa-search"></i>
                 </button>
               </div>
@@ -49,18 +52,16 @@
 
                 <!-- PUT THIS STYLING INTO THE CSS FILE -->
 
-              <div class="card mx-auto" style="width: 18rem;">
+              <div class="card mx-3 w-100">
                 <!-- card for previously searched cities -->
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush" id="city-list">
                   <!-- list items of previously searched cities will appear here via scripting -->
-                  <li class="list-group-item">Test Item 1</li>
-                  <li class="list-group-item">Test Item 2</li>
                 </ul>
               </div>
             </div>
           </aside>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <div class="card">
             <!-- Section element for current weather of searched city -->
             <section class="card-body" id="today-weather">
