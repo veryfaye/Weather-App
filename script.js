@@ -7,7 +7,6 @@ $(document).ready(function () {
 
   // display last searched city on load
   var storedCityArray = JSON.parse(localStorage.getItem("cityList"));
-  console.log(storedCityArray);
   if(!storedCityArray){
     localStorage.setItem("cityList", JSON.stringify(emptyArray));
     storedCityArray = [];
@@ -23,7 +22,6 @@ $(document).ready(function () {
     // update city array by prepending to array, store city array perform ajax call
 
     storedCityArray.unshift(cityName);
-    console.log(storedCityArray);
     localStorage.setItem("cityList", JSON.stringify(storedCityArray));
     // clear form field
     $("form").trigger("reset");
@@ -33,8 +31,6 @@ $(document).ready(function () {
 
   // click on a city similar to searching for a city
   $(document).on("click",".list-group-item",function(){
-    console.log(this);
-    console.log($(this).text());
     var cityName = $(this).text();
     storedCityArray.unshift(cityName);
     localStorage.setItem("cityList", JSON.stringify(storedCityArray));
@@ -46,7 +42,6 @@ $(document).ready(function () {
 
   function renderPage() {
     var storedCityArray = JSON.parse(localStorage.getItem("cityList"));
-    console.log(storedCityArray);
 
     // clear list items 
     $("#city-list").empty();
@@ -62,7 +57,6 @@ $(document).ready(function () {
 
     // loop through stored city array, and append each item to the list
     for (i = 0; i < storedCityArray.length; i++) {
-      console.log("For Loop Started"+i)
       var listEl = $("<button>");
       listEl.attr("class", "list-group-item btn btn-light text-left");
       listEl.text(storedCityArray[i]);
