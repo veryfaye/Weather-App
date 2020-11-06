@@ -10,14 +10,16 @@ $(document).ready(function () {
   console.log(storedCityArray);
   if(!storedCityArray){
     localStorage.setItem("cityList", JSON.stringify(emptyArray));
+    storedCityArray = [];
+  }else{
+    renderPage();
   }
-  renderPage();
+  
 
   // search for a city
   $("#submit-city-seach").on("click", function (e) {
     e.preventDefault();
     var cityName = $("#city-search").val().trim();
-
     // update city array by prepending to array, store city array perform ajax call
 
     storedCityArray.unshift(cityName);
