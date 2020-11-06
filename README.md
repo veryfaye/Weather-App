@@ -8,6 +8,9 @@ This webpage is a weather app. It allows the user to search for a city, and retu
 Weather app web page:
 ![Page for weatherapp](/images/WeatherApp.png)
 
+## Deployed Site
+[Here](https://veryfaye.github.io/Weather-App/) is the link to the deployed weather app.
+
 
 ## License
 MIT License
